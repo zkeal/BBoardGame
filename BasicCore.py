@@ -60,7 +60,7 @@ class basic_core:
              (WIDTH - GRID_WIDTH, HEIGHT - GRID_WIDTH)),
         ]
 
-        font = pygame.font.Font(None, 30)
+        font = pygame.font.SysFont('arial', 48)
         vertical_line = ['11', '10', '9', '8', '7', '6', '5', '4', '3', '2', '1']
         horizontal_line = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K']
 
@@ -135,7 +135,7 @@ class basic_core:
                         self.init_position[0] + i * self.GridWidth, self.init_position[1] + j * self.GridWidth),
                                        int(self.GridWidth / 2), 5)
 
-            font = pygame.font.Font(None, 50)
+            font = pygame.font.SysFont('arial', 50)
             if self.active_flag == 0:
                 textSurfaceObj = font.render("Sliver's Turn", True,self.sliver, self.BLACK)
                 textRectObj = textSurfaceObj.get_rect()
@@ -147,7 +147,7 @@ class basic_core:
                 textRectObj.center = (840,100)
                 surf.blit(textSurfaceObj, textRectObj)
 
-        winfont = pygame.font.Font(None, 100)
+        winfont = pygame.font.SysFont('arial', 100)
         if CurrentResult == 0:
             textSurfaceObj = winfont.render("Sliver Win", True, self.sliver, self.BLACK)
             textRectObj = textSurfaceObj.get_rect()
@@ -162,7 +162,7 @@ class basic_core:
             surf.blit(textSurfaceObj, textRectObj)
             print("Golden Win ")
 
-        LogFont = pygame.font.Font(None, 30)
+        LogFont = pygame.font.SysFont('arial', 30)
         if gamelog is not None and len(gamelog) > 0:
             if self.active_flag == 1:
                 textSurfaceObj_t = LogFont.render("Sliver's action", True, self.sliver, self.BLACK)
