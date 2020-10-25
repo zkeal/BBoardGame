@@ -3,7 +3,6 @@ import pygame
 import Cplayer
 from Alphabeta_search import ABsearch, get_TT
 import numpy as np
-from sklearn.preprocessing import MinMaxScaler
 import NNFrame as NF
 
 
