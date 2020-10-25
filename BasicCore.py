@@ -60,7 +60,7 @@ class basic_core:
              (WIDTH - GRID_WIDTH, HEIGHT - GRID_WIDTH)),
         ]
 
-        font = pygame.font.SysFont('arial', 48)
+        font = pygame.font.SysFont('arial', 30)
         vertical_line = ['11', '10', '9', '8', '7', '6', '5', '4', '3', '2', '1']
         horizontal_line = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K']
 
