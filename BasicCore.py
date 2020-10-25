@@ -417,7 +417,6 @@ class basic_core:
             #     running = False
 
 
-
     def training_evaluatingFunction(self, Sliver, Golden,depth = 1):
         golden_moving = {}
         sliver_moving = {}
@@ -440,7 +439,7 @@ class basic_core:
                 self.cheese = board
                 get_TT(board,golden_moving)
                 self.active_flag = int(not self.active_flag)
-                if G_iterate_value > g_pre_value and G_iterate_value < 90000000:
+                if G_iterate_value > g_pre_value and G_iterate_value < 100000:
                     g_GAP = G_iterate_value - g_pre_value
                     golden_loss = golden_loss + g_GAP
                     if g_GAP > g_GAP_max:
@@ -453,7 +452,7 @@ class basic_core:
                 self.cheese = board
                 get_TT(board, sliver_moving)
                 self.active_flag = int(not self.active_flag)
-                if S_iterate_value < S_pre_value and S_iterate_value < 90000000:
+                if S_iterate_value < S_pre_value and S_iterate_value < 100000:
                     S_GAP = S_pre_value - S_iterate_value
                     Sliver_loss = Sliver_loss + S_GAP
                     if S_GAP > s_GAP_max:

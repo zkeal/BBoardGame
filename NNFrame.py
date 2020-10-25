@@ -4,7 +4,6 @@ import math
 
 def initialize_parameters(n_x,n_h,n_y):
     np.random.seed(1)
-
     W1 = np.identity(n_x)
     b1 = np.zeros((n_h, 1)) + np.random.rand()
     W2 = np.identity(n_x)

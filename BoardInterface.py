@@ -71,12 +71,15 @@ class BDInterface:
     @staticmethod
     def is_flagship_escaped(chessboard):
         flagship_index = np.squeeze(np.argwhere(chessboard == 3))
-        if flagship_index is None or len(flagship_index) == 0:
+        if flagship_index is None or len(flagship_index) != 2:
             return False
-        if flagship_index[0] == 0 or flagship_index[1] == 0 or flagship_index[0] == 10 or flagship_index[1] == 10:
-            return True
-        else:
-            return False
+        try:
+            if flagship_index[0] == 0 or flagship_index[1] == 0 or flagship_index[0] == 10 or flagship_index[1] == 10:
+                return True
+            else:
+                return False
+        except:
+            print(flagship_index)
 
     @staticmethod
     def ship_remaining(chessboard):
@@ -130,6 +133,7 @@ class BDInterface:
                             Value = Value - 10#0.1#10
         except Exception:
             print(flagship_index)
+            print(chessboard)
         return Value
 
     @staticmethod
